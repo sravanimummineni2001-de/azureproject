@@ -133,9 +133,14 @@
 			{
 				"name": "Update_Last_Cdc",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "max_cdc",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -147,12 +152,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
-						"additionalColumns": [
-							{
-								"name": "cdc",
-								"value": "$$FILEPATH"
-							}
-						],
+						"additionalColumns": {
+							"type": "Expression",
+							"value": "@activity('max_cdc').output.resultsets[0].rows[0].cdc"
+						},
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
