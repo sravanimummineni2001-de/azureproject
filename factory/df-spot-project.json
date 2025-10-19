@@ -1,0 +1,9 @@
+{
+	"name": "df-spot-project",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3de946cc-0479-4c8c-b298-c58ebc900035",
+		"tenantId": "42d45cb7-d895-4b39-9b2a-9284435a74f4"
+	}
+}
