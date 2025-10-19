@@ -67,7 +67,7 @@
 						"referenceName": "Parquetdynamic",
 						"type": "DatasetReference",
 						"parameters": {
-							"Container": "containerBronze",
+							"Container": "containerbronze",
 							"Folder": "Users",
 							"File": {
 								"value": "@concat(pipeline().parameters.table,'_',variables('current'))",
