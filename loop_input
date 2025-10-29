@@ -2,7 +2,7 @@
   {
     "schema" : "dbo",
     "table"  : "DimUser",
-    "cdc : "updated_at",
+    "cdc" : "updated_at",
     "from_date" : ""
   },
   {
