@@ -185,11 +185,11 @@
 												"parameters": {
 													"Container": "containerbronze",
 													"Folder": {
-														"value": "@item().table",
+														"value": "@{item().table}",
 														"type": "Expression"
 													},
 													"File": {
-														"value": "@concat(item().table,'_',variables('Current'))",
+														"value": "@{concat(item().table,'_',variables('Current'))}",
 														"type": "Expression"
 													}
 												}
